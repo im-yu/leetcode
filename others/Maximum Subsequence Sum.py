@@ -59,7 +59,6 @@ for i in range(K):
         ans_sum = tmp_sum
         ans_right = i
         ans_left = tmp_left
-
 if ans_sum < 0:ans_sum = 0
 print("%d %d %d" % (ans_sum, nums[ans_left], nums[ans_right]))
 
