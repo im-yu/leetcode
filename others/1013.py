@@ -18,3 +18,18 @@ class Solution:
                 return True
             j += 1
         return False
+
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        stack = []
+        inorder = float('-inf')
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            if root.val <= inorder:
+                return False
+            inorder = root.val
+            root = root.right
+        return True
